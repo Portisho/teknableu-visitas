@@ -4,26 +4,33 @@
 <style>
 :root{--navy:#12364b;--petrol:#275d63;--green:#536d5d;--sage:#7f9182;--cream:#f4f1e9;--stone:#e5dfd4;--line:rgba(18,54,75,.13);--glass:rgba(248,246,240,.92)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--navy);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#ddd7cc}
-.shell{max-width:760px;margin:auto;min-height:100vh;background:
-linear-gradient(rgba(247,245,239,.36),rgba(239,240,234,.62)),
-url("fondo-teknableu.jpg") center top/cover fixed;position:relative;overflow:hidden}
-.shell:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.2),transparent 35%,rgba(68,102,92,.06));}
-.hero{min-height:390px;padding:44px 24px 30px;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center;position:relative;background:linear-gradient(180deg,rgba(250,249,245,.52),rgba(234,239,235,.12))}
-.logo-drop{width:57px;height:70px;position:relative;margin-bottom:13px;transform:rotate(45deg);border:2px solid #66858a;border-radius:58% 42% 58% 42%}
+.shell{max-width:760px;margin:auto;min-height:100vh;position:relative;overflow:hidden;
+background:
+radial-gradient(circle at 8% 5%,rgba(166,193,188,.28),transparent 24%),
+radial-gradient(circle at 96% 18%,rgba(207,213,198,.32),transparent 27%),
+linear-gradient(180deg,#f8f6f0 0%,#f1eee6 48%,#e9e4da 100%)}
+.shell:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.38;
+background:
+repeating-radial-gradient(ellipse at -10% 45%,transparent 0 46px,rgba(39,93,99,.07) 47px 48px,transparent 49px 82px),
+repeating-radial-gradient(ellipse at 115% 78%,transparent 0 58px,rgba(83,109,93,.06) 59px 60px,transparent 61px 98px)}
+.hero{min-height:520px;padding:54px 24px 36px;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center;position:relative;
+background:linear-gradient(180deg,rgba(255,255,255,.72),rgba(247,245,238,.35));
+border-bottom:1px solid rgba(18,54,75,.08)}
+.logo-drop{width:54px;height:66px;position:relative;margin-bottom:15px;transform:rotate(45deg);border:2px solid #6f8f91;border-radius:58% 42% 58% 42%;box-shadow:0 5px 18px rgba(39,93,99,.08)}
 .logo-drop:before,.logo-drop:after{content:"";position:absolute;border:1px solid #66858a;border-radius:50%;inset:10px}.logo-drop:after{inset:18px}
-.brand{font-family:Georgia,serif;font-size:31px;letter-spacing:.18em}.strap{font-size:9px;letter-spacing:.31em;margin-top:5px}.claim{font:31px/1.12 Georgia,serif;margin:30px 0 12px}.claim em{font-style:normal;color:#637e70}
+.brand{font-family:Georgia,"Times New Roman",serif;font-size:31px;letter-spacing:.19em;font-weight:500}.strap{font-size:9px;letter-spacing:.31em;margin-top:5px}.claim{font:32px/1.14 Georgia,"Times New Roman",serif;margin:32px 0 14px}.claim em{font-style:normal;color:#637e70}
 .values{display:grid;grid-template-columns:repeat(4,1fr);width:100%;max-width:500px;gap:9px;margin-top:20px}.value{font-size:9px;letter-spacing:.04em}.value i{display:block;font-style:normal;font-size:21px;margin-bottom:5px}
 .start{margin-top:28px;width:min(330px,90%);border:1px solid rgba(255,255,255,.8);background:linear-gradient(90deg,#536d5d,#728775);color:#fff;border-radius:999px;padding:15px;text-decoration:none;font-size:13px;letter-spacing:.1em;box-shadow:0 8px 25px #173c3824}
 .steps{position:sticky;top:0;z-index:50;display:grid;grid-template-columns:repeat(4,1fr);padding:10px 8px;background:rgba(245,242,234,.91);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
 .steps a{color:var(--navy);text-decoration:none;text-align:center;font-size:9px}.steps b{display:block;width:29px;height:29px;line-height:29px;border-radius:50%;background:#d9e0dc;margin:auto auto 4px;font-size:10px}.steps a:first-child b{background:var(--navy);color:#fff}
-main{padding:10px 12px 42px}section{scroll-margin-top:62px;background:var(--glass);border-radius:25px;padding:19px;margin:13px 0;border:1px solid rgba(255,255,255,.72);box-shadow:0 12px 32px rgba(28,47,47,.09);backdrop-filter:blur(14px)}
+main{padding:10px 12px 42px}section{scroll-margin-top:62px;background:rgba(250,248,242,.96);border-radius:25px;padding:19px;margin:13px 0;border:1px solid rgba(18,54,75,.08);box-shadow:0 14px 34px rgba(28,47,47,.07)}
 h2{font:23px Georgia,serif;margin:0 0 4px}.subtitle{margin:0 0 18px;font-size:11px;color:#667a76}.section-title{display:flex;gap:10px;align-items:center}.section-title .ico{font-size:24px}
 .grid,.contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:11px}label{display:block;font-size:11px;font-weight:650;color:#24475a}
 input,textarea{width:100%;margin-top:5px;padding:12px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.7);font:inherit;color:#172f3d;outline:none;box-shadow:inset 0 1px 2px #00000008}textarea{min-height:72px;resize:vertical}input:focus,textarea:focus{border-color:#6d897c;box-shadow:0 0 0 3px #71877a1f}
 .question,.contact{display:flex;gap:11px;padding:12px 0;border-bottom:1px solid var(--line)}.question:last-child,.contact:last-child{border:0}.num{flex:0 0 31px;width:31px;height:31px;border-radius:50%;display:grid;place-items:center;background:#587263;color:#fff;font-weight:750;font-size:11px}.grow,.contactgrid{flex:1}
 .water{margin:12px 0;padding:14px;border-radius:17px;background:rgba(255,255,255,.48);border:1px solid var(--line)}.water h3{font:18px Georgia,serif;margin:0 0 12px;display:flex;gap:8px;align-items:center}.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
 .actions{display:grid;gap:10px;margin-top:18px}.btn,button{display:block;width:100%;border:0;border-radius:999px;padding:15px 18px;font-size:14px;font-weight:750;text-align:center;text-decoration:none;cursor:pointer}.primary{background:linear-gradient(90deg,#244d49,#54715f);color:white;box-shadow:0 7px 20px #1c494229}.secondary{background:rgba(225,230,223,.9);color:var(--navy)}.note{font-size:10px;text-align:center;color:#6d7b77;line-height:1.4}
-footer{padding:26px 15px 36px;text-align:center;font-size:9px;letter-spacing:.19em;background:rgba(42,52,47,.82);color:#f1eee5}
+.c2-motto{text-align:center;padding:26px 12px 12px;font:18px Georgia,serif;letter-spacing:.18em;color:#315c5d}footer{padding:18px 15px 30px;text-align:center;font-size:9px;letter-spacing:.19em;background:#33443f;color:#f1eee5}
 @media(max-width:560px){.hero{min-height:92vh}.grid,.contactgrid{grid-template-columns:1fr}.brand{font-size:26px}.claim{font-size:29px}.values{gap:3px}}
 </style></head><body><div class="shell">
 <header class="hero"><div class="logo-drop"></div><div class="brand">TEKNABLEU</div><div class="strap">AGUA · AIRE · BIENESTAR</div>
@@ -56,7 +63,7 @@ footer{padding:26px 15px 36px;text-align:center;font-size:9px;letter-spacing:.19
 <label>Dirección<input name="c6_direccion"></label><label>Ciudad<input name="c6_ciudad"></label>
 <label>Familia<input name="c6_familia"></label><label>Qué os une<input name="c6_une"></label></div></div>
 <div class="actions"><a id="email" class="btn primary" href="mailto:?subject=Estudio%20de%20agua%20TeknaBleu">✉　ENVIAR ESTUDIO POR EMAIL</a><button type="button" id="new" class="secondary">↻　Nueva visita</button></div><p class="note">Los datos se guardan localmente en este dispositivo mientras completas la visita.</p></section>
-</main></form><footer>SALUD · COMPROMISO · CONOCIMIENTO · SEGURIDAD</footer></div>
+</main></form><div class="c2-motto">CONOCE TU AGUA</div><footer>SALUD · COMPROMISO · CONOCIMIENTO · SEGURIDAD</footer></div>
 <script>
 const form=document.getElementById('form'),mail=document.getElementById('email'),key='teknableu_visita_v2',labels={"q1": "¿Os ha gustado la forma en que nos damos a conocernos?", "q2": "¿Qué destacaríais de esta visita?", "q3": "¿Os gustaría dejar de utilizar el agua del grifo para beber y cocinar?", "q4": "¿Qué agua utilizaríais para beber a partir de ahora, mineral?", "q5": "¿Y para cocinar?", "q6": "¿Lavar los alimentos?", "q7": "¿Por qué motivo lo haríais?", "q8": "¿Os parece interesante tener la información de un equipo de tratamientos de agua para no tener que comprar agua mineral?", "q9": "¿Le dais importancia al almacenaje?", "q10": "¿Y al plástico?", "q11": "Indícanos tres motivos por los cuales compraríais una depuradora.", "q12": "Al menos uno por el que no lo haríais", "q13": "¿Pensáis que una publicidad en vivo es mejor?"};
 function d(){return Object.fromEntries(new FormData(form))}
